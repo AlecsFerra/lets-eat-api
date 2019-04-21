@@ -1,0 +1,17 @@
+jwt:
+  expire-time: 3600
+  header: EAT-TOKEN
+  signing-key: ${token-sig}
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: ${db-url}
+    username: ${db-uname}
+    password: ${db-pwd}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+server:
+contextPath: /letseat
