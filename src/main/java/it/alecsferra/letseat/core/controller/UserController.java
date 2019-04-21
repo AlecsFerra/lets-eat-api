@@ -29,7 +29,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("user/register")
+    @PostMapping("register")
     public SimpleResult register(@RequestBody @Validated SignUpUser userDto, BindingResult bindingResult) {
 
         SimpleResult result = new SimpleResult();
@@ -49,7 +49,7 @@ public class UserController {
         return result;
     }
 
-    @PostMapping("user/login")
+    @PostMapping("login")
     public LoginResult login(@RequestBody @Validated LoginUser loginUser, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()){
